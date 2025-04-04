@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import "./styles.css"
-import PeliculasMasPop from "./PeliculasMasPop";
-import PeliculasEnCartel from "./PeliculasEnCartel";
-
+import PeliculasMasPop from "../PeliculasMasPop/PeliculasMasPop";
+import PeliculasEnCartel from "../PeliculasEnCartel/PeliculasEnCartel";
 
 
 function Home(){

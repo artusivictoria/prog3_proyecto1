@@ -21,9 +21,9 @@ import PeliculaMasPop from "../PeliculaMasPop/PeliculaMasPop";
 
 
 
-let urlJew= 'https://api.themoviedb.org/3/movie/popular'
+let urlMoviesMasPop= 'https://api.themoviedb.org/3/movie/popular'
 
-fetch(urlJew)
+fetch(urlMoviesMasPop)
     .then(function(response){
         return response.json();
     })

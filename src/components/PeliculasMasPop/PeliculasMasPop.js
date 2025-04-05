@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import PeliculaMasPop from "../PeliculaMasPop/PeliculaMasPop";
 
-let urlMoviesMasPop = 'https://api.themoviedb.org/3/movie/popular?'; // desp tengo que poner lo de api key!! acordate soph q sino no veo la pag
+ApiA= "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4ZDQzNTM3YzM5MmJjNDVjNGRmN2I0MDkyOWE4MTJiNyIsIm5iZiI6MTc0MzUxMjY4Mi4zMzQsInN1YiI6IjY3ZWJlNDZhYjZkYzllMGE4NzdhYWIwZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.PhaJvVgmH_NphauTqiij87nCZFdP7sXLe6q-y3aiG4w"
+ApiB="8d43537c392bc45c4df7b40929a812b7"
+let urlMoviesMasPop = 'https://api.themoviedb.org/3/movie/popular'; // desp tengo que poner lo de api key!! acordate soph q sino no veo la pag
 
 class PeliculasMasPop extends Component {
   constructor(props) {

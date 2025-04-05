@@ -6,14 +6,12 @@ import PeliculasEnCartel from "./PeliculasEnCartel";
 
 
 function Home(){
-        return (
-            
-        <React.Fragment>
+    return (    
+        <>
             <PeliculasMasPop/>
             <PeliculasEnCartel/>
-        </React.Fragment>
-               
-            
+        </>
+ //preguntar a los profes si prefieren que usemos react fragment o la abreviacion    
         )
 }
 

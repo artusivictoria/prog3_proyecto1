@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import "./styles.css"
-import PeliculasMasPop from "../PeliculasMasPop/PeliculasMasPop";
-import PeliculasEnCartel from "../PeliculasEnCartel/PeliculasEnCartel";
+import FivePeliculasMasPop from "../FivePeliculasMasPop/FivePeliculasMasPop";
+import FivePeliculasEnCartel from "../FivePeliculasEnCartel/FivePeliculasEnCartel";
 
 
 function Home(){
     return (    
         <>
-            <PeliculasMasPop/>
-            <PeliculasEnCartel/>
+            <FivePeliculasMasPop/>
+            <FivePeliculasEnCartel/>
         </>
- //preguntar a los profes si prefieren que usemos react fragment o la abreviacion    
+            
         )
 }
 

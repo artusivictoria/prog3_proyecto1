@@ -10,6 +10,24 @@ class PeliculaEnCartel extends Component {
             textoBoton: 'OCULTAR'
         }
     }
+    
+    ocultar() {
+        // if(this.state.mostrarContenido === true){
+        //     this.setState({
+        //         mostrarContenido: false,
+        //         textoBoton: 'ver mas'\
+        //     })
+        // } else {
+        //     this.setState({
+        //         mostrarContenido: true,
+        //         textoBoton: 'OCULTAR'
+        //     })
+        // }
+        this.setState({
+            mostrarContenido: !this.state.mostrarContenido,
+            textoBoton: this.state.mostrarContenido === true ? 'ver mas' : 'OCULTAR'
+        })
+        
 
     }
     render() {

@@ -1,9 +1,12 @@
 import React, { Component } from "react";
-import PeliculaEnCartel from "../FivePeliculaEnCartel/FivePeliculaEnCartel";
 
-let urlPeliculasEnCartel = 'https://api.themoviedb.org/3/movie/upcoming';
+//import PeliculaEnCartel from "../FivePeliculaEnCartel/FivePeliculaEnCartel";
+import PeliculaEnCartel from '../PeliculaEnCartel/PeliculaEnCartel'
 
-class PeliculasEnCartel extends Component {
+//let urlPeliculasEnCartel = 'https://api.themoviedb.org/3/movie/upcoming';
+let urlPeliculasEnCartel = 'https://api.themoviedb.org/3/movie/upcoming?api_key=9ed45d655a81dcc3d8732fddd5bc0588';
+
+class FivePeliculasEnCartel extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,7 +24,7 @@ class PeliculasEnCartel extends Component {
           let p = data.results[i];
           peliculasArray.push({
             id: p.id,
-            imagen: p.poster_path,
+            imagen: `https://image.tmdb.org/t/p/w342${p.poster_path}`,
             nombre: p.title,
             descripcion: p.overview
           });
@@ -46,3 +49,4 @@ class PeliculasEnCartel extends Component {
 
 
 export default FivePeliculasEnCartel;
+

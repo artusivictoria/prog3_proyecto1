@@ -1,9 +1,12 @@
 import React, { Component } from "react";
-import PeliculaMasPop from "../FivePeliculaMasPop/FivePeliculaMasPop";
+import PeliculaMasPop from '../PeliculaMasPop/PeliculaMasPop';
 
-let urlMoviesMasPop = 'https://api.themoviedb.org/3/movie/popular';
+//let urlMoviesMasPop = 'https://api.themoviedb.org/3/movie/popular';
 
-class PeliculasMasPop extends Component {
+//agregar APIKEY
+let urlMoviesMasPop = 'https://api.themoviedb.org/3/movie/popular?api_key=9ed45d655a81dcc3d8732fddd5bc0588';
+
+class FivePeliculasMasPop extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,7 +24,7 @@ class PeliculasMasPop extends Component {
           let p = data.results[i];
           peliculasArray.push({
             id: p.id,
-            imagen: p.poster_path,
+            imagen: `https://image.tmdb.org/t/p/w500${p.poster_path}`,
             nombre: p.title,
             descripcion: p.overview
           });

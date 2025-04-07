@@ -7,7 +7,10 @@ import FivePeliculasEnCartel from "../FivePeliculasEnCartel/FivePeliculasEnCarte
 function Home(){
     return (    
         <>
+            <h2>Películas más populares</h2>
             <FivePeliculasMasPop/>
+            
+            <h2>Películas en cartel</h2>
             <FivePeliculasEnCartel/>
         </>
             

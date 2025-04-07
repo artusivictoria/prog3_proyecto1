@@ -6,8 +6,8 @@ class PeliculaMasPop extends Component {
     super(props);
     this.state = {
       data: props.data,
-      mostrarContenido: true,
-      textoBoton: 'OCULTAR'
+      mostrarContenido: false,
+      textoBoton: 'VER MAS'
     };
   }
 
@@ -15,7 +15,7 @@ class PeliculaMasPop extends Component {
     if (this.state.mostrarContenido === true) {
       this.setState({
         mostrarContenido: false,
-        textoBoton: 'ver mas'
+        textoBoton: 'VER MAS'
     });
 } else {
   this.setState({

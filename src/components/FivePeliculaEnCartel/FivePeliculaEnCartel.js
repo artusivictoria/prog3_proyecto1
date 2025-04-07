@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import "./styles.css";
+//import "./styles.css";
 
-class PeliculaEnCartel extends Component {
+class FivePeliculaEnCartel extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,7 +15,7 @@ class PeliculaEnCartel extends Component {
     if (this.state.mostrarContenido === true) {
       this.setState({
         mostrarContenido: false,
-        textoBoton: 'ver mas'
+        textoBoton: 'VER MAS'
       });
     } else {
       this.setState({
@@ -27,7 +27,7 @@ class PeliculaEnCartel extends Component {
 
   render() {
     return (
-      <div>
+      <div >
         <img src={this.state.data.imagen} alt="imagen de peliculaEnCartel" />
         <h4>{this.state.data.nombre}</h4>
         {this.state.mostrarContenido === true ?       
@@ -43,4 +43,3 @@ class PeliculaEnCartel extends Component {
 }
 
 export default FivePeliculaEnCartel;
-

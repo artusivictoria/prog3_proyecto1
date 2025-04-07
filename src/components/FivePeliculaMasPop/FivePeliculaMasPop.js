@@ -1,9 +1,9 @@
 // obs. en 5PeliculaMasPop tengo exactamente el mismo codigo que en PeliculaMasPop
 
 import React, { Component } from 'react';
-import "./styles.css";
+//import "./styles.css";
 
-class PeliculaMasPop extends Component {
+class FivePeliculaMasPop extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,7 +17,7 @@ class PeliculaMasPop extends Component {
     if (this.state.mostrarContenido === true) {
       this.setState({
         mostrarContenido: false,
-        textoBoton: 'ver mas'
+        textoBoton: 'VER MAS'
     });
 } else {
   this.setState({

@@ -19,17 +19,17 @@ class FivePeliculasMasPop extends Component {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        let peliculasArray = [];
-        for (let i = 0; i < 5; i++) {
-          let p = data.results[i];
-          peliculasArray.push({
-            id: p.id,
-            imagen: `https://image.tmdb.org/t/p/w342${p.poster_path}`,
-            nombre: p.title,
-            descripcion: p.overview
-          });
-        }
-        this.setState({ peliculas: peliculasArray });
+        // let peliculasArray = [];
+        // for (let i = 0; i < 5; i++) {
+        //   let p = data.results[i];
+        //   peliculasArray.push({
+        //     id: p.id,
+        //     imagen: `https://image.tmdb.org/t/p/w342${p.poster_path}`,
+        //     nombre: p.title,
+        //     descripcion: p.overview
+        //   });
+        // }
+        this.setState({ peliculas: data.results.slice(0,5) });
       })
       .catch((error) => {
         console.log(error);

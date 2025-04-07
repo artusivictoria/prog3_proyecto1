@@ -1,8 +1,5 @@
 import React from 'react';
 import { Link , Switch , Route, BrowserRouter} from 'react-router-dom';
-import Home from '../Home/Home'
-import PeliculasMasPop from '../PeliculasMasPop/PeliculasMasPop';
-import PeliculasEnCartel from '../PeliculasEnCartel/PeliculasEnCartel';
 import './header.css'
 
 function Header() {

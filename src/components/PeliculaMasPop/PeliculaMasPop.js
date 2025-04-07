@@ -27,6 +27,7 @@ class PeliculaMasPop extends Component {
 }
 
 render() {
+  console.log('propsprops', this.props)
 return (
   <div className='article' >
     <img className='imagenP'src={`https://image.tmdb.org/t/p/w342${this.state.data.poster_path}`} alt="imagen de peliculaMasPop" />

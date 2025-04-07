@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 //import "./styles.css";
+import '../peliContainer.css'
 
 class FivePeliculaMasPop extends Component {
   constructor(props) {
@@ -9,28 +10,28 @@ class FivePeliculaMasPop extends Component {
     this.state = {
       data: props.data,
       mostrarContenido: true,
-      textoBoton: 'OCULTAR'
+      textoBoton: 'VER MAS'
     };
   }
 
   ocultar() {
     if (this.state.mostrarContenido === true) {
       this.setState({
-        mostrarContenido: false,
-        textoBoton: 'VER MAS'
+        mostrarContenido: true,
+        textoBoton: 'OCULTAR'
     });
 } else {
   this.setState({
-    mostrarContenido: true,
-    textoBoton: 'OCULTAR'
+    mostrarContenido: false,
+    textoBoton: 'VER MAS'
   });
 }
 }
 
 render() {
 return (
-  <div>
-    <img src={this.state.data.imagen} alt="imagen de peliculaMasPop" />
+  <div className='article'>
+    <img className='imagenP' src={this.state.data.imagen} alt="imagen de peliculaMasPop" />
     <h4>{this.state.data.nombre}</h4>
     {this.state.mostrarContenido === true ?       
       <p>{this.state.data.descripcion}</p>

@@ -1,0 +1,30 @@
+.nav-hom {
+    display: flex;
+    background-color: #b70a0a;
+}
+
+
+.nav-hom a{
+    font-weight: lighter;
+    text-decoration: none
+}
+
+
+.nav-hom li{
+    padding: 8px;
+    align-self: center;
+
+}
+
+.nav-hom li a{
+    color: rgb(231, 231, 231);
+    font-size: 19px;
+    text-transform: uppercase;
+    font-family: "Outfit", sans-serif;
+    justify-content: center;
+
+}
+.nav-hom ul {
+    list-style-type: none;
+    display: flex;
+}

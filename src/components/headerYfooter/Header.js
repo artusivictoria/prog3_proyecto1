@@ -3,29 +3,20 @@ import { Link , Switch , Route, BrowserRouter} from 'react-router-dom';
 import Home from '../Home/Home'
 import PeliculasMasPop from '../PeliculasMasPop/PeliculasMasPop';
 import PeliculasEnCartel from '../PeliculasEnCartel/PeliculasEnCartel';
-
+import './header.css'
 
 function Header() {
     return (
-      <BrowserRouter>
-        
-        <h1>Mi App de Películas</h1>
 
-        <Link to="/">Home</Link> <br/>
-        <Link to="/favoritos">favoritos</Link><br/>
-        <Link to = '/PeliculasMasPop'>Peliculas Populares</Link> <br/>
-        <Link to = '/PeliculasEnCartel'>Peliculas en cartelera</Link> <br/>
-
-        <Switch> 
-        <Route exact path="/" component={Home} />
-        <Route path="/PeliculasMasPop" component={PeliculasMasPop} />
-        <Route path="/PeliculasEnCartel" component={PeliculasEnCartel} />
-        
-        </Switch> 
-
-        </BrowserRouter>
-
-
+      <div className='nav-hom'>
+        <h1>NETFLIX</h1>
+        <ul>
+        <li><Link to="/">Home</Link></li><br/>
+        <li><Link to="/favoritos">favoritos</Link></li><br/>
+        <li><Link to = '/PeliculasMasPop'>Peliculas Populares</Link> </li><br/>
+        <li><Link to = '/PeliculasEnCartel'>Peliculas en cartelera</Link> </li><br/>
+        </ul>
+      </div>
     );
   }
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./styles.css";
+import '../peliContainer.css'
 
 class PeliculaMasPop extends Component {
   constructor(props) {
@@ -12,26 +13,26 @@ class PeliculaMasPop extends Component {
   }
 
   ocultar() {
-    if (this.state.mostrarContenido === true) {
+    if (this.state.mostrarContenido === false) {
       this.setState({
-        mostrarContenido: false,
-        textoBoton: 'VER MAS'
+        mostrarContenido: true,
+        textoBoton: 'OCULTAR'
     });
 } else {
   this.setState({
-    mostrarContenido: true,
-    textoBoton: 'OCULTAR'
+    mostrarContenido: false,
+    textoBoton: 'VER MAS'
   });
 }
 }
 
 render() {
 return (
-  <div>
-    <img src={this.state.data.imagen} alt="imagen de peliculaMasPop" />
-    <h4>{this.state.data.nombre}</h4>
+  <div className='article' >
+    <img className='imagenP'src={`https://image.tmdb.org/t/p/w342${this.state.data.poster_path}`} alt="imagen de peliculaMasPop" />
+    <h4>{this.state.data.original_title}</h4>
     {this.state.mostrarContenido === true ?       
-      <p>{this.state.data.descripcion}</p>
+      <p>{this.state.data.overview}</p>
       : ''
     }
     <button onClick={() => this.ocultar()}>

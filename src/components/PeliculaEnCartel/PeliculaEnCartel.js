@@ -1,34 +1,35 @@
 import React, { Component } from 'react';
 import "./styles.css";
+import '../peliContainer.css'
 
 class PeliculaEnCartel extends Component {
   constructor(props) {
     super(props);
     this.state = {
       data: props.data,
-      mostrarContenido: true,
-      textoBoton: 'OCULTAR'
+      mostrarContenido: false,
+      textoBoton: 'VER MAS'
     };
   }
 
   ocultar() {
-    if (this.state.mostrarContenido === true) {
-      this.setState({
-        mostrarContenido: false,
-        textoBoton: 'ver mas'
-      });
-    } else {
+    if (this.state.mostrarContenido === false) {
       this.setState({
         mostrarContenido: true,
         textoBoton: 'OCULTAR'
+      });
+    } else {
+      this.setState({
+        mostrarContenido: false,
+        textoBoton: 'VER MAS'
       });
     }
   }
 
   render() {
     return (
-      <div>
-        <img src={this.state.data.imagen} alt="imagen de peliculaEnCartel" />
+      <div className='article' >
+        <img className='imagenP' src={this.state.data.imagen} alt="imagen de peliculaEnCartel" />
         <h4>{this.state.data.nombre}</h4>
         {this.state.mostrarContenido === true ?       
           <p>{this.state.data.descripcion}</p>

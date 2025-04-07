@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 //import "./styles.css";
+import '../peliContainer.css'
 
 class FivePeliculaEnCartel extends Component {
   constructor(props) {
@@ -27,8 +28,8 @@ class FivePeliculaEnCartel extends Component {
 
   render() {
     return (
-      <div >
-        <img src={this.state.data.imagen} alt="imagen de peliculaEnCartel" />
+      <div className='article' >
+        <img className='imagenP'src={this.state.data.imagen} alt="imagen de peliculaEnCartel" />
         <h4>{this.state.data.nombre}</h4>
         {this.state.mostrarContenido === true ?       
           <p>{this.state.data.descripcion}</p>

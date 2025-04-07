@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 //import PeliculaEnCartel from "../FivePeliculaEnCartel/FivePeliculaEnCartel";
 import PeliculaEnCartel from '../PeliculaEnCartel/PeliculaEnCartel'
-
+import '../peliContainer.css'
 //let urlPeliculasEnCartel = 'https://api.themoviedb.org/3/movie/upcoming';
 let urlPeliculasEnCartel = 'https://api.themoviedb.org/3/movie/upcoming?api_key=9ed45d655a81dcc3d8732fddd5bc0588';
 
@@ -38,7 +38,7 @@ class FivePeliculasEnCartel extends Component {
 
   render() {
     return (
-      <div>
+      <div className='peliculas-container'>
         {this.state.peliculas.map((peli) => (
           <PeliculaEnCartel key={peli.id} data={peli} />
         ))}

@@ -16,12 +16,7 @@ class PeliculasEnCartel extends Component {
         .then((response) => response.json())
         .then((data) => {
           console.log(data)
-          // let peliculasArray = data.results.map(p => ({
-          //   id: p.id,
-          //   imagen: `https://image.tmdb.org/t/p/w342${p.poster_path}`,
-          //   nombre: p.title,
-          //   descripcion: p.overview
-          // }));
+        
           this.setState({ peliculas: data.results });
         })
         .catch((error) => {

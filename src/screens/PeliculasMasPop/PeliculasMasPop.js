@@ -41,20 +41,3 @@ class PeliculasMasPop extends Component {
 export default PeliculasMasPop;
 
 
-/**  componentDidMount() {
-    fetch(urlMoviesMasPop)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data)
-        let peliculasArray = data.results.map(p => ({
-          id: p.id,
-          imagen: `https://image.tmdb.org/t/p/w342${p.poster_path}`,
-          nombre: p.title,
-          descripcion: p.overview
-        }));
-        this.setState({ peliculas: peliculasArray });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  } */

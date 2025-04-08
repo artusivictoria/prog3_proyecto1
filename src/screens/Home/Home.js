@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import "./styles.css"
 import FivePeliculasMasPop from "../../components/FivePeliculasMasPop/FivePeliculasMasPop";
 import FivePeliculasEnCartel from "../../components/FivePeliculasEnCartel/FivePeliculasEnCartel";
@@ -7,10 +6,10 @@ import FivePeliculasEnCartel from "../../components/FivePeliculasEnCartel/FivePe
 function Home(){
     return (    
         <>
-            <h2>Películas más populares!!</h2>
+            <h2 className='seccion'>Películas Populares</h2>
             <FivePeliculasMasPop/>
 
-            <h2>Películas en cartel</h2>
+            <h2 className='seccion'>Películas en cartelera</h2>
             <FivePeliculasEnCartel/>
         </>
             

@@ -21,8 +21,10 @@ function App() {
     <Switch> 
     <Route exact path="/" component={Home} />
     <Route path="/PeliculasMasPop" component={PeliculasMasPop} />
+    <Route path={'/detalle/:id'} component={Detalle} />
     <Route path="/PeliculasEnCartel" component={PeliculasEnCartel} />
     <Route component={NotFound} />
+
 
     </Switch> 
 

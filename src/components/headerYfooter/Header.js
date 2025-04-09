@@ -11,7 +11,9 @@ function Header() {
         <li><Link to="/">Home</Link></li><br/>
         <li><Link to="/favoritos">favoritos</Link></li><br/>
         <li><Link to = '/PeliculasMasPop'>Peliculas Populares</Link> </li><br/>
+        <li><Link to={`/detalle/${peli.id}`}>detalle</Link></li>
         <li><Link to = '/PeliculasEnCartel'>Peliculas en cartelera</Link> </li><br/>
+
         </ul>
       </div>
     );

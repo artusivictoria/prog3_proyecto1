@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 //import PeliculaEnCartel from "../FivePeliculaEnCartel/FivePeliculaEnCartel";
 import '../peliContainer.css'
 //let urlPeliculasEnCartel = 'https://api.themoviedb.org/3/movie/upcoming';
@@ -20,17 +19,27 @@ class FivePeliculasEnCartel extends Component {
       .then((data) => {
         console.log(data);
       
-        this.setState({ peliculas: data.results.slice(0,5) });
+        this.setState({ 
+          peliculas: data.results.slice(0,5)  }
+          );
       })
       .catch((error) => {
         console.log(error);
       });
   }
 
+
   render() {
     return (
       <div className='peliculas-container'>
-        {this.state.peliculas.map((peli) => (
+      
+        
+        {
+
+        this.state.length === 0?
+        <h1>Cargando peliculas</h1>
+        :
+        this.state.peliculas.map((peli) => (
           <PeliculaMasPop key={peli.id} data={peli} />
         ))}
       </div>

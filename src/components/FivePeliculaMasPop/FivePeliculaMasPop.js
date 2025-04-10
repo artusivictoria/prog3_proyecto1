@@ -10,6 +10,7 @@ class FivePeliculaMasPop extends Component {
     super(props);
     this.state = {
       data: props.data,
+      favorito: false,
       mostrarContenido: true,
       textoBoton: 'VER MAS'
     };
@@ -48,6 +49,17 @@ class FivePeliculaMasPop extends Component {
     })
   }
 
+  sacarDeFav(id){
+    const storage = localStorage.getItem('fav')
+    const storageParseado = JSON.parse(storage)
+    const filtrarStorage = storageParseado.filter((elm) => elm !== id )
+    const storageStringificado = JSON.stringify(filtrarStorage)
+    localStorage.setItem('fav', storageStringificado)
+
+    this.setState({
+      favorito: false
+    })
+  }
 
   render() {
 
@@ -63,6 +75,14 @@ class FivePeliculaMasPop extends Component {
         <button onClick={() => this.ocultar()}>
           {this.state.textoBoton}
         </button>
+
+        {
+          this.state.favorito ?
+          <button onClick={()=> this.sacarDeFav(this.state.data.id) }>Sacar de favoritos</button>
+          :
+          <button onClick={() => this.agregarAFav(this.state.data.id)}>Agregar a favoritos</button>
+        }
+
       </div>
     );
   }

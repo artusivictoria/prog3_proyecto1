@@ -1,8 +1,5 @@
 import React from 'react';
-import { Link , Switch , Route, BrowserRouter} from 'react-router-dom';
-import Home from '../Home/Home'
-import PeliculasMasPop from '../PeliculasMasPop/PeliculasMasPop';
-import PeliculasEnCartel from '../PeliculasEnCartel/PeliculasEnCartel';
+import { Link} from 'react-router-dom';
 import './header.css'
 
 function Header() {
@@ -14,7 +11,9 @@ function Header() {
         <li><Link to="/">Home</Link></li><br/>
         <li><Link to="/favoritos">favoritos</Link></li><br/>
         <li><Link to = '/PeliculasMasPop'>Peliculas Populares</Link> </li><br/>
+        <li><Link to={`/detalle/${peli.id}`}>detalle</Link></li>
         <li><Link to = '/PeliculasEnCartel'>Peliculas en cartelera</Link> </li><br/>
+
         </ul>
       </div>
     );

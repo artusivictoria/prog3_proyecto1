@@ -19,27 +19,28 @@ class FivePeliculasMasPop extends Component {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        let peliculasArray = [];
-        for (let i = 0; i < 5; i++) {
-          let p = data.results[i];
-          peliculasArray.push({
-            id: p.id,
-            imagen: `https://image.tmdb.org/t/p/w342${p.poster_path}`,
-            nombre: p.title,
-            descripcion: p.overview
-          });
-        }
-        this.setState({ peliculas: peliculasArray });
+
+        this.setState({ peliculas: data.results.slice(0,5) });
       })
       .catch((error) => {
         console.log(error);
       });
   }
+  filtrarPersonajes(busquedaUsuario){
+    const personajesFiltrados = this.state.backupPeliculas.filter((elm)=>elm.original_title.toLowerCase().includes(busquedaUsuario.toLowerCase()))
+    this.setState({
+      peliculas : personajesFiltrados})
+
+  }
 
   render() {
     return (
       <div className='peliculas-container'>
-        {this.state.peliculas.map((peli) => (
+        {
+        this.state.length === 0?
+        <h1>Cargando peliculas</h1>
+        :
+        this.state.peliculas.map((peli) => (
           <PeliculaMasPop key={peli.id} data={peli} />
         ))}
       </div>
@@ -48,3 +49,5 @@ class FivePeliculasMasPop extends Component {
 }
 
 export default FivePeliculasMasPop;
+
+

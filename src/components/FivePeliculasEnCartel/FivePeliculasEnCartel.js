@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-
 //import PeliculaEnCartel from "../FivePeliculaEnCartel/FivePeliculaEnCartel";
-import PeliculaEnCartel from '../PeliculaEnCartel/PeliculaEnCartel'
 import '../peliContainer.css'
 //let urlPeliculasEnCartel = 'https://api.themoviedb.org/3/movie/upcoming';
+import PeliculaMasPop from "../PeliculaMasPop/PeliculaMasPop";
 let urlPeliculasEnCartel = 'https://api.themoviedb.org/3/movie/upcoming?api_key=9ed45d655a81dcc3d8732fddd5bc0588';
 
 class FivePeliculasEnCartel extends Component {
@@ -19,28 +18,29 @@ class FivePeliculasEnCartel extends Component {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        let peliculasArray = [];
-        for (let i = 0; i < 5; i++) {
-          let p = data.results[i];
-          peliculasArray.push({
-            id: p.id,
-            imagen: `https://image.tmdb.org/t/p/w342${p.poster_path}`,
-            nombre: p.title,
-            descripcion: p.overview
-          });
-        }
-        this.setState({ peliculas: peliculasArray });
+      
+        this.setState({ 
+          peliculas: data.results.slice(0,5)  }
+          );
       })
       .catch((error) => {
         console.log(error);
       });
   }
 
+
   render() {
     return (
       <div className='peliculas-container'>
-        {this.state.peliculas.map((peli) => (
-          <PeliculaEnCartel key={peli.id} data={peli} />
+      
+        
+        {
+
+        this.state.length === 0?
+        <h1>Cargando peliculas</h1>
+        :
+        this.state.peliculas.map((peli) => (
+          <PeliculaMasPop key={peli.id} data={peli} />
         ))}
       </div>
     );

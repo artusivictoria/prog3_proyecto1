@@ -30,6 +30,18 @@ class FivePeliculaMasPop extends Component {
     }
   }
 
+  
+  componentDidMount(){
+    let storage= localStorage.getItem('fav')
+    if(storage !== null){
+      let storageParseado = JSON.parse(storage)
+      let estaMiId = storageParseado.includes(this.state.data.id)
+
+      if(estaMiId){
+        this.setState({favorito: true})
+      }
+    }
+  }
 
   agregarAFav(id) {
     let storage = localStorage.getItem('fav')

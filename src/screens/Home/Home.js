@@ -2,7 +2,7 @@ import "./styles.css"
 import FivePeliculasMasPop from "../../components/FivePeliculasMasPop/FivePeliculasMasPop";
 import FivePeliculasEnCartel from "../../components/FivePeliculasEnCartel/FivePeliculasEnCartel";
 //import Filtro from '../../components/FiltroPeli/Filtro'
-import Buscador from '../Buscador/Buscador'
+import Buscador from '../../components/Buscador/Buscador'
 
 
 function Home(props){

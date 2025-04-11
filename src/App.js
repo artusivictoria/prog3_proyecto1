@@ -6,6 +6,7 @@ import PeliculasEnCartel from './screens/PeliculasEnCartel/PeliculasEnCartel'
 import './App.css';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import Detalle from './screens/DetallePelicula/Detalle'
+import Fav from './screens/Fav/Fav'
 import NotFound from './screens/NotFound/NotFound';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/PeliculasMasPop" component={PeliculasMasPop} />
         <Route path={'/detalle/:id'} component={Detalle} />
         <Route path="/PeliculasEnCartel" component={PeliculasEnCartel} />
+        <Route path={'/favoritos'} component={Fav} />
         <Route path="" component={NotFound} />
       </Switch>
     </BrowserRouter>

@@ -4,32 +4,29 @@ import Home from "./screens/Home/Home"
 import PeliculasMasPop from './screens/PeliculasMasPop/PeliculasMasPop'
 import PeliculasEnCartel from './screens/PeliculasEnCartel/PeliculasEnCartel'
 import './App.css';
-import {Switch , Route, BrowserRouter} from 'react-router-dom';
-import NotFound from './components/headerYfooter/NotFound';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import Detalle from './screens/DetallePelicula/Detalle'
+import NotFound from './screens/NotFound/NotFound';
 
 function App() {
-  
-   
 
   return (
-
-
-
     <BrowserRouter>
+      {/* root.render(
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      ); */}
+
       <Header />
-        
-    <Switch> 
-    <Route exact path="/" component={Home} />
-    <Route path="/PeliculasMasPop" component={PeliculasMasPop} />
-    <Route path={'/detalle/:id'} component={Detalle} />
-    <Route path="/PeliculasEnCartel" component={PeliculasEnCartel} />
-    <Route component={NotFound} />
-
-
-    </Switch> 
-
+      <Switch>
+        <Route path="/" exact={true} component={Home} />
+        <Route path="/PeliculasMasPop" component={PeliculasMasPop} />
+        <Route path={'/detalle/:id'} component={Detalle} />
+        <Route path="/PeliculasEnCartel" component={PeliculasEnCartel} />
+        <Route path="" component={NotFound} />
+      </Switch>
     </BrowserRouter>
-
   );
 }
 

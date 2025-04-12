@@ -5,7 +5,7 @@ export default function Detalle(props) {
   console.log('El idficha es: ',idFicha)
   return (
     <div>
-    Detalle de la ficha {idFicha}
+      Detalle de la ficha {idFicha}
     </div>
     
   )

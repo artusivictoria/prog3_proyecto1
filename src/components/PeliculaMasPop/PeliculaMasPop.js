@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import "./styles.css";
 import '../peliContainer.css'
+import {Link} from 'react-router-dom'
 
 class PeliculaMasPop extends Component {
   constructor(props) {
@@ -76,8 +77,13 @@ class PeliculaMasPop extends Component {
   render() {
     console.log('propsprops', this.props)
     return (
+      
       <div className='article' >
+            
+        <Link to={`/detalle/${this.props.data.id}`}>
         <img className='imagenP' src={`https://image.tmdb.org/t/p/w342${this.state.data.poster_path}`} alt="imagen de peliculaMasPop" />
+        </Link>
+
         <h4>{this.state.data.original_title}</h4>
         {this.state.mostrarContenido === true ?
           <p>{this.state.data.overview}</p>
@@ -93,6 +99,7 @@ class PeliculaMasPop extends Component {
             :
             <button onClick={() => this.agregarAFav(this.state.data.id)}>Agregar a favoritos</button>
         }
+
 
       </div>
     );

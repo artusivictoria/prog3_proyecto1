@@ -31,7 +31,7 @@ class PeliculasEnCartel extends Component {
       });
   }
 
-  filtrarPersonajes(busquedaUsuario) {
+  filtrarPeliculas(busquedaUsuario) {
     const personajesFiltrados = this.state.backupPeliculas.filter((elm) => elm.original_title.toLowerCase().includes(busquedaUsuario.toLowerCase()))
     this.setState({
       peliculas: personajesFiltrados
@@ -53,7 +53,8 @@ class PeliculasEnCartel extends Component {
   render() {
     return (
       <div className='peliculas-container'>
-        <Filtro filtro={(busqueda) => this.filtrarPersonajes(busqueda)} />
+      <Filtro filtro={(busqueda) => this.filtrarPeliculas(busqueda)} />
+        
         {
 
           this.state.length === 0 ?
@@ -63,7 +64,7 @@ class PeliculasEnCartel extends Component {
               <PeliculaMasPop data={peli} />
             ))}
         <button onClick={() => this.cargarMas()}>
-          Cargar mas Peliculas
+          Cargar mas Peliculas en Cartelera
         </button>
       </div>
 

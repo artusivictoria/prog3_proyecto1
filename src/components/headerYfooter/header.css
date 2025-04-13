@@ -28,3 +28,16 @@
     list-style-type: none;
     display: flex;
 }
+
+@media (max-width: 390px){
+    .nav-hom{
+        flex-direction: column;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .nav-hom ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+    }
+}

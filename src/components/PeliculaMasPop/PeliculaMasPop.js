@@ -1,8 +1,8 @@
-import '../../components/peliContainer.css'
+
 import React, { Component } from 'react';
-import "./styles.css";
-import '../peliContainer.css'
+import "./PeliculaMasPop.css";
 import {Link} from 'react-router-dom'
+
 
 class PeliculaMasPop extends Component {
   constructor(props) {

@@ -17,7 +17,7 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
-    color: white; /* asegura texto blanco en todo el contenido */
+    color: white; 
   }
   
   .detalle-info img {
@@ -36,7 +36,7 @@
   .detalle-info p {
     font-size: 16px;
     margin: 8px 0;
-    color: white; /* hace explícito que los <p> son blancos */
+    color: white;
   }
   
   .links {
@@ -48,3 +48,5 @@
     border-radius: 5px;
     text-decoration: none;
   }
+
+

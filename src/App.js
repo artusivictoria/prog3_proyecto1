@@ -13,12 +13,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      {/* root.render(
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      ); */}
-
+     
       <Header />
       <Switch>
         <Route path="/" exact={true} component={Home} />

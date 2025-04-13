@@ -46,6 +46,7 @@ class PeliculaMasPop extends Component {
     let storage = localStorage.getItem('fav')
     if (storage !== null) {
       let arrParseado = JSON.parse(storage)
+      
       arrParseado.push(id)
       let arrStringificado = JSON.stringify(arrParseado)
       localStorage.setItem('fav', arrStringificado)
@@ -71,7 +72,14 @@ class PeliculaMasPop extends Component {
     this.setState({
       favorito: false
     })
+//obs. es borrarDeFav pq asi lo puse en el return de Fav
+    if(this.props.borrarDeFav !== undefined){
+      this.props.borrarDeFav(id)
+    }
+
   }
+
+  
 
 
   render() {

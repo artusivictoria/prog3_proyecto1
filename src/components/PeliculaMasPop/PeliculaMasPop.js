@@ -86,15 +86,15 @@ class PeliculaMasPop extends Component {
     console.log('propsprops', this.props)
     return (
       
-      <div className='article' >
+      <div className='cardPeli' >
             
        
-        <img className='imagenP' src={`https://image.tmdb.org/t/p/w342${this.state.data.poster_path}`} alt="imagen de peliculaMasPop" />
+        <img className='imagenP' src={`https://image.tmdb.org/t/p/w342${this.props.data.poster_path}`} alt="imagen de peliculaMasPop" />
        
 
-        <h4>{this.state.data.original_title}</h4>
+        <h4>{this.props.data.original_title}</h4>
         {this.state.mostrarContenido === true ?
-          <p>{this.state.data.overview}</p>
+          <p>{this.props.data.overview}</p>
           : ''
         }
         <button className='links' onClick={() => this.ocultar()}>
@@ -103,9 +103,9 @@ class PeliculaMasPop extends Component {
 
         {
           this.state.favorito ?
-            <button className='links' onClick={() => this.sacarDeFav(this.state.data.id)}>Sacar de favoritos</button>
+            <button className='links' onClick={() => this.sacarDeFav(this.props.data.id)}>Sacar de favoritos</button>
             :
-            <button className='links' onClick={() => this.agregarAFav(this.state.data.id)}>Agregar a favoritos</button>
+            <button className='links' onClick={() => this.agregarAFav(this.props.data.id)}>Agregar a favoritos</button>
         }
 
         <Link className='links' to={`/detalle/${this.props.data.id}`}>    

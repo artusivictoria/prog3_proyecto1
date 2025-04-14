@@ -7,3 +7,9 @@
 
 }
 
+@media (max-width: 560px) {
+    .peliculas-container {
+      width: 90%;
+      padding: 5%;
+    }
+}

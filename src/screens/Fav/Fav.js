@@ -44,9 +44,10 @@ export default class Fav extends Component {
             elm => elm.id !== id
         )
         //obs. estas tres lieneas de abajo son para q cuando saques una película de favoriitos, tambien se borra del localStorage, y si recargás la pgina ya no vuelve a aparecer
-        let storage = JSON.parse(localStorage.getItem('fav'));
-        let actualizado = storage.filter(elm => elm !== id);
-        localStorage.setItem('fav', JSON.stringify(actualizado));
+        // let storage = JSON.parse(localStorage.getItem('fav'));
+        // let actualizado = storage.filter(elm => elm !== id);
+        // localStorage.setItem('fav', JSON.stringify(actualizado));
+        console.log('peliculas filyrtadas', peliculasFiltradas)
 
         this.setState({peliculasFav: peliculasFiltradas})
     }

@@ -61,8 +61,8 @@ class PeliculasEnCartel extends Component {
           this.state.peliculas.length === 0?
           <h1>Cargando peliculas</h1>
             :
-            this.state.peliculas.map((peli) => (
-              <PeliculaMasPop data={peli} />
+            this.state.peliculas.map((peli, idx) => (
+              <PeliculaMasPop data={peli} key={idx + peli.original_title} />
             ))}
         <button className="links" onClick={() => this.cargarMas()}>
           Cargar mas Peliculas en Cartelera

@@ -13,10 +13,26 @@ class Detalle extends Component {
     super(props);
     this.state = {
       detalle: null,
-      favorito: false
-
+      favorito: false,
+      mostrarContenido: false,
+      textoBoton: 'VER MAS'
     }
   }
+  
+  ocultar() {
+    if (this.state.mostrarContenido === false) {
+      this.setState({
+        mostrarContenido: true,
+        textoBoton: 'OCULTAR'
+      });
+    } else {
+      this.setState({
+        mostrarContenido: false,
+        textoBoton: 'VER MAS'
+      });
+    }
+  }
+
 
   //esto pongo null (y fav false) pq todavía no tengo los datos de la película, pq el fetch a la API aún no se hizo, osea detalle va a ser  un objeto completo con la info de la peli pero todavía no lo tengo. Entonces uso null como valor inicial
   //obs. no puse null en por ej FivePelliculasMasPOp pq ahi use en vez un array vacio para iniciar el estado con lo de this.state, y luego cn lo de this.state.peliculas.map(...) no puse null pq estaba esperando un array de pelis, y react puede iterar sobre un array vacío sin romperse. Pero en la página de detalle, el estado detalle es un objeto, y no podés hacer cosas como detalle.title si detalle es undefined, entonces pongo detalle null para luego hacer lo del cargando en el return
@@ -61,6 +77,11 @@ class Detalle extends Component {
     let filtrado = storage.filter(elm => elm !== id);
     localStorage.setItem('fav', JSON.stringify(filtrado));
     this.setState({ favorito: false });
+    
+    //obs. es borrarDeFav pq asi lo puse en el return de Fav
+    if(this.props.borrarDeFav !== undefined){
+      this.props.borrarDeFav(id)
+    }
   }
 
   render() {

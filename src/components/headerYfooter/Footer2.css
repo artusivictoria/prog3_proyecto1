@@ -1,0 +1,24 @@
+footer {
+    background-color: #000000;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+footer ul li {
+    color: rgb(169, 41, 41);
+    padding: 8px 12px;
+    
+
+}

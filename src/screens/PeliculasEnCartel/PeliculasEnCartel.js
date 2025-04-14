@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import PeliculaMasPop from "../../components/PeliculaMasPop/PeliculaMasPop";
 import Filtro from '../../components/FiltroPeli/Filtro'
+import Footer2 from "../../components/headerYfooter/Footer2";
 let urlMoviesEnCartel = 'https://api.themoviedb.org/3/movie/upcoming?api_key=9ed45d655a81dcc3d8732fddd5bc0588'
 
 class PeliculasEnCartel extends Component {
@@ -66,6 +67,8 @@ class PeliculasEnCartel extends Component {
         <button className="links" onClick={() => this.cargarMas()}>
           Cargar mas Peliculas en Cartelera
         </button>
+
+        <Footer2/>
       </div>
 
     );

@@ -1,5 +1,6 @@
 import React from 'react';
 import "./styles.css"
+import Footer2 from '../../components/headerYfooter/Footer2';
 
 function NotFound() {
   return (
@@ -8,6 +9,8 @@ function NotFound() {
       <p className="not-found-message">¡Uy! No encontramos esa página.</p>
       {/* obs. podria haber importado link y haber hecho con link en vez de href como hice en otras paginas*/
       <a href="/" className="not-found-link">Volver al inicio</a>  }
+
+      <Footer2/>
     </div>
   );
 }

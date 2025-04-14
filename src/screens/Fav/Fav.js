@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import PeliculaMasPop from '../../components/PeliculaMasPop/PeliculaMasPop'
 import "./styles.css"
+import Footer2 from '../../components/headerYfooter/Footer2'
 
 export default class Fav extends Component {
     constructor(props){
@@ -68,6 +69,8 @@ export default class Fav extends Component {
                     ? <h1>Cargando Pagina de Peliculas Favoritas</h1>
                     : <h1>No hay peliculas selecionadas como Favoritas</h1>
                 }
+
+                <Footer2/>
 
             </div>
         )

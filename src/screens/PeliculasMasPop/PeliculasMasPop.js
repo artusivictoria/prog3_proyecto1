@@ -52,7 +52,7 @@ class PeliculasMasPop extends Component {
   render() {
     return (
       <div className='peliculas-container'>
-      <Filtro clasfiltro={(busqueda)=>this.filtrarPeliculas(busqueda)}/> 
+      <Filtro filtro={(busqueda)=>this.filtrarPeliculas(busqueda)}/> 
        {
        this.state.peliculas.length === 0?
         <h1>Cargando peliculas</h1>

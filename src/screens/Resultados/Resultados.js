@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import "./styles.css"
 
 class Resultados extends Component {
     constructor(props) {
@@ -20,10 +20,10 @@ class Resultados extends Component {
     render() {
         return (
 
-            <div>
-                <h1>Resultados de: {this.state.busqueda}</h1>
-                <section>
-                    {this.state.resultados.map(elm => <h2>{elm.original_title}</h2>)}
+            <div className="resultados-container">
+                <h1 className="resultados-titulo">Resultados de: {this.state.busqueda}</h1>
+                <section className="resultados-lista">
+                    {this.state.resultados.map(elm => <h2 className="resultado-item">{elm.original_title}</h2>)}
                 </section>
 
             </div>

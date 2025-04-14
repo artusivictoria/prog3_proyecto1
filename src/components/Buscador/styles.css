@@ -1,0 +1,26 @@
+.buscador-form {
+    display: flex;
+    justify-content: flex-start; 
+    margin: 20px;
+  }
+  
+  .buscador-input {
+    width: 250px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+  }
+  
+  .buscador-boton {
+    padding: 8px 16px;
+    background-color: #b70a0a;
+    color: white;
+    border: 1px solid #b70a0a;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  

@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
 import PeliculaMasPop from '../../components/PeliculaMasPop/PeliculaMasPop'
+import "./styles.css"
 
 export default class Fav extends Component {
     constructor(props){
@@ -51,7 +52,8 @@ export default class Fav extends Component {
 
     render() {
         return (
-            <div>
+            <div className="favoritos-container" >
+                <h2 className="titulo-favoritos">Mis Películas Favoritas</h2>
                 {
                 this.state.peliculasFav.length > 0 
                 ?

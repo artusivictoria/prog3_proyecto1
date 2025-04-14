@@ -7,6 +7,7 @@ import './App.css';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import Detalle from './screens/DetallePelicula/Detalle'
 import Fav from './screens/Fav/Fav'
+import Resultados from './screens/Resultados/Resultados';
 import NotFound from './screens/NotFound/NotFound';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path={'/detalle/:id'} component={Detalle} />
         <Route path="/PeliculasEnCartel" component={PeliculasEnCartel} />
         <Route path={'/favoritos'} component={Fav} />
+        <Route path="/resultados/:busqueda" component={Resultados} />
         <Route path="" component={NotFound} />
       </Switch>
     </BrowserRouter>

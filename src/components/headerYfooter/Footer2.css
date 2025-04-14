@@ -1,0 +1,28 @@
+footer {
+    width: 100%;
+    background-color: black;
+    border-top: 1px solid #e0e0e0;
+    color: #999;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    position: relative;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+footer ul li {
+    color: rgb(169, 41, 41);
+    padding: 8px 12px;
+    list-style: none;
+
+}
+

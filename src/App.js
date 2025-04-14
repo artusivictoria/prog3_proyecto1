@@ -19,11 +19,13 @@ function App() {
       <Switch>
         <Route path="/" exact={true} component={Home} />
         <Route path="/PeliculasMasPop" component={PeliculasMasPop} />
-        <Route path={'/detalle/:id'} component={Detalle} />
         <Route path="/PeliculasEnCartel" component={PeliculasEnCartel} />
         <Route path={'/favoritos'} component={Fav} />
+        <Route path={'/detalle/:id'} component={Detalle} />
         <Route path="/resultados/:busqueda" component={Resultados} />
-        <Route path="" component={NotFound} />
+
+        <Route path=''component={NotFound}> </Route>
+
       </Switch>
     </BrowserRouter>
   );

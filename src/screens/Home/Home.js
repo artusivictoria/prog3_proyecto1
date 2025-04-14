@@ -3,6 +3,7 @@ import FivePeliculasMasPop from "../../components/FivePeliculasMasPop/FivePelicu
 import FivePeliculasEnCartel from "../../components/FivePeliculasEnCartel/FivePeliculasEnCartel";
 //import Filtro from '../../components/FiltroPeli/Filtro'
 import Buscador from '../../components/Buscador/Buscador'
+import Footer2 from "../../components/headerYfooter/Footer2";
 
 
 function Home(props){
@@ -16,6 +17,8 @@ function Home(props){
 
             <h2 className='seccion'>Películas en cartelera</h2>
             <FivePeliculasEnCartel/>
+
+            <Footer2/>
         </>
             
         )

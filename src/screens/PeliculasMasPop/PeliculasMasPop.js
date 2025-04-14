@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PeliculaMasPop from "../../components/PeliculaMasPop/PeliculaMasPop";
-//import 'peliContainer.css'
 import Filtro from '../../components/FiltroPeli/Filtro'
-
+import '../PeliculasMasPop/PeliculasMasPop.css'
+import Footer2 from "../../components/headerYfooter/Footer2";
 let urlMoviesMasPop = 'https://api.themoviedb.org/3/movie/popular?api_key=9ed45d655a81dcc3d8732fddd5bc0588'; 
 
 
@@ -52,17 +52,18 @@ class PeliculasMasPop extends Component {
   render() {
     return (
       <div className='peliculas-container'>
-      <Filtro clasfiltro={(busqueda)=>this.filtrarPeliculas(busqueda)}/> 
-       {this.state.peliculas.length === 0?
+      <Filtro filtro={(busqueda)=>this.filtrarPeliculas(busqueda)}/> 
+       {
+       this.state.peliculas.length === 0?
         <h1>Cargando peliculas</h1>
         :
         this.state.peliculas.map((peli) => (
           <PeliculaMasPop key={peli.id} data={peli} />
         ))}
-        <button onClick={()=> this.cargarMas()}>
+        <button className='links'onClick={()=> this.cargarMas()}>
           Cargar mas Peliculas Populares
         </button>
-        
+      <Footer2/>
       </div>
     );
   }
@@ -70,22 +71,3 @@ class PeliculasMasPop extends Component {
 
 export default PeliculasMasPop;
 
-
-/**  render() {
-    return (
-      <div className='peliculas-container'>
-<Filtro clasfiltro={(busqueda)=>this.filtrarPersonajes(busqueda)}/> 
-       {this.state.peliculas.length === 0?
-        <h1>Cargando peliculas</h1>
-        :
-        this.state.peliculas.map((peli) => (
-          <PeliculaMasPop key={peli.id} data={peli} />
-        ))}
-        <button onClick={()=> this.cargarMas()}>
-          Cargar mas Peliculas
-        </button>
-        
-      </div>
-    );
-  }
-} */

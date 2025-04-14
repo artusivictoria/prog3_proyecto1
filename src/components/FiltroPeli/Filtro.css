@@ -1,0 +1,21 @@
+
+.nav {
+    width: 100%;
+    background-color: #000000; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    top: 10%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+.input{
+
+    display: flex;
+    width: 50%;
+    padding: 10px 10px;   
+    border-radius: 5px;
+    
+}
+

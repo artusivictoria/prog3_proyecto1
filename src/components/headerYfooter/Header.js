@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link} from 'react-router-dom'
 import './header.css'
-import Detalle from '../../screens/DetallePelicula/Detalle'
+
 function Header() {
     return (
 

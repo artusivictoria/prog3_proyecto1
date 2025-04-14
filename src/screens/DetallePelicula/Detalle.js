@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';///desp uso link, q es lo mismo q si hubiese puesto <a href="">
-import '../../components/peliContainer.css'
+
 import '../DetallePelicula/styles.css'
+import '../../components/headerYfooter/Footer2'
+import Footer2 from '../../components/headerYfooter/Footer2';
+
 const apiKey = '9ed45d655a81dcc3d8732fddd5bc0588';
 
 
@@ -95,6 +98,7 @@ class Detalle extends Component {
             </div>
 
         }
+      <Footer2/>
       </div>
     );
   }

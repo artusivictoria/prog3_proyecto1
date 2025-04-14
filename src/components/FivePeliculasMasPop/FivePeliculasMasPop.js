@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PeliculaMasPop from '../PeliculaMasPop/PeliculaMasPop';
-import '../peliContainer.css'
+
 //let urlMoviesMasPop = 'https://api.themoviedb.org/3/movie/popular';
 
 //agregar APIKEY
@@ -37,7 +37,7 @@ class FivePeliculasMasPop extends Component {
     return (
       <div className='peliculas-container'>
         {
-        this.state.length === 0?
+        this.state.peliculas.length === 0?
         <h1>Cargando peliculas</h1>
         :
         this.state.peliculas.map((peli) => (

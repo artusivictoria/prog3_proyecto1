@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-import '../peliContainer.css'
+import '../FiltroPeli/Filtro.css'
+
 
 class Filtro extends Component{
 

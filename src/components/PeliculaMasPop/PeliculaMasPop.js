@@ -105,7 +105,10 @@ class PeliculaMasPop extends Component {
           this.state.favorito ?
             <button className='links' onClick={() => this.sacarDeFav(this.props.data.id)}>Sacar de favoritos</button>
             :
-            <button className='links' onClick={() => this.agregarAFav(this.props.data.id)}>Agregar a favoritos</button>
+            <button className='links' onClick={() => {
+              this.agregarAFav(this.props.data.id);
+              alert('¡Has agregado a favoritos!')}
+            }>Agregar a favoritos</button>
         }
 
         <Link className='links' to={`/detalle/${this.props.data.id}`}>    

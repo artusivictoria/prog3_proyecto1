@@ -16,42 +16,23 @@
     color: #b70a0a;
 
   }
+
   
-  /* esto de abajo o lo pongo en el de pelis mas pop o lo puedo sacar, ver para unificar esteticaa */
-  /* .favorito-card {
-    background-color: #4a4a4a;
-    width: 22%;
-    border-radius: 10px;
-    padding: 2%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    text-align: center;
-    color: white;
+.cargarFav{
+    color: rgb(0, 0, 0);
+    font-size: 19px;
+    text-transform: uppercase;
+    font-family: "Outfit", sans-serif;
+    justify-content: center;
+}
+
+
+@media (max-width: 560px) {
+  .cargarFav {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .favorito-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  
-  .favorito-card h4 {
-    margin: 10px 0 5px 0;
-    font-size: 110%;
-    font-weight: bold;
-    color: #fff;
-  }
-  
-  .favorito-boton {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #e50914;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-  } 
-   */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+}

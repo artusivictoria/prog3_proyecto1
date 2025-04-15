@@ -67,8 +67,8 @@ export default class Fav extends Component {
                     />)
                 :
                 this.state.hayElementosEnFav === false 
-                    ? <h1>Cargando Pagina de Peliculas Favoritas</h1>
-                    : <h1>No hay peliculas selecionadas como Favoritas</h1>
+                    ? <h1 className='cargarFav'>Cargando Pagina de Peliculas Favoritas</h1>
+                    : <h1 className='cargarFav'>¡Aun no has elegido tus peliculas favoritas!</h1>
                 }
 
                 <Footer2/>

@@ -92,7 +92,7 @@ class Detalle extends Component {
         {/* Cn esto de evito q me de error la local host por querer leer .title o otras cosas de algo que todavía no existe*/}
         {/* tener esto en cuenta para cuando me dice lo de "Cannot read properties of null (reading 'title')" */}
         {
-          peli === null ? <h2>Cargando...</h2> :
+          peli === null ? <h2 >Cargando...</h2> :
 
             <div className='detalle-info'>
               <img src={`https://image.tmdb.org/t/p/w500${peli.poster_path}`} alt={peli.title} />
@@ -110,7 +110,13 @@ class Detalle extends Component {
                 this.state.favorito ?
                   <button className='links' onClick={() => this.sacarDeFav(peli.id)}>Quitar de favoritos</button>
                   :
-                  <button className='links' onClick={() => this.agregarAFav(peli.id)}>Agregar a favoritos</button>
+                  <button 
+                    className='links' 
+                    onClick={() => {
+                      this.agregarAFav(peli.id);
+                      alert('¡Has agregado a favoritos!')
+                    }}>Agregar a favoritos</button>
+                  
               }
               <br />
 

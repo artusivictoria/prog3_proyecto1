@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import "../PeliculasEnCartel/styles.css"
 import PeliculaMasPop from "../../components/PeliculaMasPop/PeliculaMasPop";
 import Filtro from '../../components/FiltroPeli/Filtro'
 import Footer2 from "../../components/headerYfooter/Footer2";
@@ -54,21 +54,21 @@ class PeliculasEnCartel extends Component {
   render() {
     return (
       <div className='peliculas-container'>
-      <Filtro filtro={(busqueda) => this.filtrarPeliculas(busqueda)} />
-        
+        <Filtro filtro={(busqueda) => this.filtrarPeliculas(busqueda)} />
+
         {
 
-          this.state.peliculas.length === 0?
-          <h1>Cargando peliculas</h1>
+          this.state.peliculas.length === 0 ?
+            <h1>Cargando peliculas</h1>
             :
             this.state.peliculas.map((peli, idx) => (
               <PeliculaMasPop data={peli} key={idx + peli.original_title} />
             ))}
-        <button className="links" onClick={() => this.cargarMas()}>
+        <button className="botonn" onClick={() => this.cargarMas()}>
           Cargar mas Peliculas en Cartelera
         </button>
 
-        <Footer2/>
+        <Footer2 />
       </div>
 
     );

@@ -60,7 +60,7 @@ class PeliculasMasPop extends Component {
         this.state.peliculas.map((peli) => (
           <PeliculaMasPop key={peli.id} data={peli} />
         ))}
-        <button className='links'onClick={()=> this.cargarMas()}>
+        <button className='botonn'onClick={()=> this.cargarMas()}>
           Cargar mas Peliculas Populares
         </button>
       <Footer2/>

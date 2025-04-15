@@ -20,16 +20,17 @@ class FivePeliculasMasPop extends Component {
       .then((data) => {
         console.log(data);
 
-        this.setState({ peliculas: data.results.slice(0,5) });
+        this.setState({ peliculas: data.results.slice(0, 5) });
       })
       .catch((error) => {
         console.log(error);
       });
   }
-  filtrarPersonajes(busquedaUsuario){
-    const personajesFiltrados = this.state.backupPeliculas.filter((elm)=>elm.original_title.toLowerCase().includes(busquedaUsuario.toLowerCase()))
+  filtrarPersonajes(busquedaUsuario) {
+    const personajesFiltrados = this.state.backupPeliculas.filter((elm) => elm.original_title.toLowerCase().includes(busquedaUsuario.toLowerCase()))
     this.setState({
-      peliculas : personajesFiltrados})
+      peliculas: personajesFiltrados
+    })
 
   }
 
@@ -37,12 +38,12 @@ class FivePeliculasMasPop extends Component {
     return (
       <div className='peliculas-container'>
         {
-        this.state.peliculas.length === 0?
-        <h1>Cargando peliculas</h1>
-        :
-        this.state.peliculas.map((peli) => (
-          <PeliculaMasPop key={peli.id} data={peli} />
-        ))}
+          this.state.peliculas.length === 0 ?
+            <h1>Cargando peliculas</h1>
+            :
+            this.state.peliculas.map((peli) => (
+              <PeliculaMasPop key={peli.id} data={peli} />
+            ))}
       </div>
     );
   }

@@ -4,19 +4,19 @@
 }
 
 
-.nav-hom a{
+.nav-hom a {
     font-weight: lighter;
     text-decoration: none
 }
 
 
-.nav-hom li{
+.nav-hom li {
     padding: 8px;
     align-self: center;
 
 }
 
-.nav-hom li a{
+.nav-hom li a {
     color: rgb(231, 231, 231);
     font-size: 19px;
     text-transform: uppercase;
@@ -24,20 +24,28 @@
     justify-content: center;
 
 }
+
 .nav-hom ul {
     list-style-type: none;
     display: flex;
 }
 
-@media (max-width: 560px){
-    .nav-hom{
+@media (max-width: 560px) {
+    .nav-hom {
         flex-direction: column;
         flex-wrap: wrap;
         flex-direction: column;
     }
+
     .nav-hom ul {
         list-style-type: none;
         display: flex;
         flex-direction: column;
     }
+
+    .nav-hom h1 {
+        text-align: center;
+        width: 100%;
+    }
+
 }

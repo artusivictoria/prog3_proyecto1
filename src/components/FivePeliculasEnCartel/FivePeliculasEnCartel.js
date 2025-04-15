@@ -17,10 +17,11 @@ class FivePeliculasEnCartel extends Component {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-      
-        this.setState({ 
-          peliculas: data.results.slice(0,5)  }
-          );
+
+        this.setState({
+          peliculas: data.results.slice(0, 5)
+        }
+        );
       })
       .catch((error) => {
         console.log(error);
@@ -31,16 +32,16 @@ class FivePeliculasEnCartel extends Component {
   render() {
     return (
       <div className='peliculas-container'>
-      
-        
+
+
         {
 
-        this.state.peliculas.length === 0?
-        <h1>Cargando peliculas</h1>
-        :
-        this.state.peliculas.map((peli) => (
-          <PeliculaMasPop key={peli.id} data={peli} />
-        ))}
+          this.state.peliculas.length === 0 ?
+            <h1>Cargando peliculas</h1>
+            :
+            this.state.peliculas.map((peli) => (
+              <PeliculaMasPop key={peli.id} data={peli} />
+            ))}
       </div>
     );
   }
